@@ -24,6 +24,7 @@ const MostVotes = ({ pointsArray, anecdotes }) => {
     return maxIdx;
   }  
   console.log("outside", pointsArray)
+
   return (
   <>
     <h1>

@@ -1,6 +1,6 @@
 const express = require('express')
-const cors = require('cors)')
-const http = require('http')
+const cors = require('cors')
+const app = express()
 
 app.use(cors())
 app.use(express.static('build'))
@@ -22,7 +22,7 @@ let notes = [
     important: true
   }
 ]
-const app = http.createServer((request, response) => {
+app.get((request, response) => {
   response.writeHead(200, { 'Content-Type': 'application/json' })
   response.end(JSON.stringify(notes))
 })
